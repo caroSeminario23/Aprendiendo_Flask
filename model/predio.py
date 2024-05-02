@@ -6,7 +6,7 @@ from dataclasses import dataclass # importa el decorador dataclass para crear un
 class Predio(db.Model):
     id_predio: int
     id_tipo_predio: int
-    description: str
+    descripcion: str
     ruc: str
     telefono: str
     correo: str
@@ -15,7 +15,7 @@ class Predio(db.Model):
 
     id_predio = db.Column(db.Integer, primary_key=True) # crea una columna de tipo entero que es la clave primaria
     id_tipo_predio = db.Column(db.Integer)
-    description = db.Column(db.String(100))
+    descripcion = db.Column(db.String(100))
     ruc = db.Column(db.String(20))
     telefono = db.Column(db.String(10))
     correo = db.Column(db.String(80))
@@ -23,9 +23,9 @@ class Predio(db.Model):
     idubigeo = db.Column(db.String(6))
 
     # crea un constructor de la clase
-    def __init__(self, id_tipo_predio, description, ruc, telefono, correo, direccion, idubigeo):
+    def __init__(self, id_tipo_predio, descripcion, ruc, telefono, correo, direccion, idubigeo):
         self.id_tipo_predio = id_tipo_predio
-        self.description = description
+        self.descripcion = descripcion
         self.ruc = ruc
         self.telefono = telefono
         self.correo = correo
