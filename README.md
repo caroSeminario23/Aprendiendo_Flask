@@ -56,24 +56,40 @@ Para instalar este proyecto debe seguir los siguientes pasos:
 ### Capturas de pruebas de ejecución
 #### Con Thunder Client:
 - **Contacto:**
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen1.png)
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen2.png)
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen3.png)
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen4.png)
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen5.png)
+
 
 - **Predio:**
 ![Captura de pantalla de Thunder Client](imagenes/imagen6.png)
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen7.png)
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen8.png)
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen9.png)
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen10.png)
+
 
 #### Con Render:
 - **Contacto:**
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen11.png)
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen12.png)
 
+
 - **Predio:**
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen13.png)
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen14.png)
