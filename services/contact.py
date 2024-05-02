@@ -4,14 +4,14 @@ from utils.db import db # importa la instancia de la clase SQLAlchemy para inter
 
 contacts = Blueprint('contacts', __name__) # crea un blueprint con el nombre 'contacts' para agrupar las rutas relacionadas con los contactos
 
-@contacts.route('/contacts/v1', methods=['GET']) # decorador que indica la ruta y los métodos HTTP permitidos
+@contacts.route('/contactos/v1', methods=['GET']) # decorador que indica la ruta y los métodos HTTP permitidos
 # ruta para imprimir un mensaje
 def get_Mensaje():
     result = {} # crea un diccionario vacío
     result['data'] = 'Aprendiendo_Flask' # agrega un mensaje al diccionario
     return jsonify(result) # devuelve el diccionario como una respuesta JSON
 
-@contacts.route('/contacts/v1/listar', methods=['GET']) 
+@contacts.route('/contactos/v1/listar', methods=['GET']) 
 # ruta para listar los contactos
 def get_Contactos():
     result = {} # crea un diccionario vacío
@@ -21,7 +21,7 @@ def get_Contactos():
     result['msg'] = "Se recuperó los contactos sin inconvenientes" # agrega un mensaje al diccionario
     return jsonify(result), 200 # devuelve el diccionario como una respuesta JSON con un código de estado 200
 
-@contacts.route('/contacts/v1/insert', methods=['POST']) # Se usa el método POST para insertar un contacto ya que se envía información al servidor
+@contacts.route('/contactos/v1/insert', methods=['POST']) # Se usa el método POST para insertar un contacto ya que se envía información al servidor
 # ruta para insertar un contacto
 def insert_Contactos():
     result = {}
@@ -41,7 +41,7 @@ def insert_Contactos():
     result['msg'] = "Se insertó el contacto sin inconvenientes"
     return jsonify(result), 201
 
-@contacts.route('/contacts/v1/update', methods=['POST']) # Se usa el método POST para actualizar un contacto ya que se envía información al servidor
+@contacts.route('/contactos/v1/update', methods=['POST']) # Se usa el método POST para actualizar un contacto ya que se envía información al servidor
 # ruta para actualizar un contacto
 def update_Contactos():
     result = {}
@@ -69,7 +69,7 @@ def update_Contactos():
     result['msg'] = "Se actualizó el contacto sin inconvenientes"
     return jsonify(result), 202
 
-@contacts.route('/contacts/v1/delete', methods=['DELETE']) # Se usa el método DELETE para eliminar un contacto ya que se envía información al servidor
+@contacts.route('/contactos/v1/delete', methods=['DELETE']) # Se usa el método DELETE para eliminar un contacto ya que se envía información al servidor
 # ruta para eliminar un contacto
 def delete_Contactos():
     result = {}

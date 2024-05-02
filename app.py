@@ -1,6 +1,6 @@
 from flask import Flask
 from config import DATABASE_CONNECTION
-from utils import db
+from utils.db import db
 from services.contact import contacts
 
 app = Flask(__name__) # crea una instancia de la clase Flask
