@@ -69,6 +69,7 @@ Para instalar este proyecto debe seguir los siguientes pasos:
 
 
 - **Predio:**
+
 ![Captura de pantalla de Thunder Client](imagenes/imagen6.png)
 
 ![Captura de pantalla de Thunder Client](imagenes/imagen7.png)
