@@ -1,6 +1,6 @@
 from utils.ma import ma
 from model.predio import Predio
-from marshamallow import fields
+from marshmallow import fields
 from schemas.tipo_predio_schema import TipoPredioSchema
 
 class PredioSchema(ma.Schema):
