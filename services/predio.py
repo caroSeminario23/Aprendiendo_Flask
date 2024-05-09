@@ -1,17 +1,18 @@
-from flask import Blueprint, request, jsonify # importa la clase Blueprint para crear un blueprint, request para manejar las solicitudes HTTP y jsonify para devolver respuestas JSON
+from flask import Blueprint, request, jsonify, make_response # importa la clase Blueprint para crear un blueprint, request para manejar las solicitudes HTTP y jsonify para devolver respuestas JSON
+from utils.db import db
 from model.predio import Predio
-from utils.db import db # importa la instancia de la clase SQLAlchemy para interactuar con la base de datos
+from schemas.predio_schema import predio_schema, predios_schema
 
-predios = Blueprint('predios', __name__) # crea un blueprint con el nombre 'contacts' para agrupar las rutas relacionadas con los contactos
+predios_routes = Blueprint('predios_routes', __name__) # crea un blueprint con el nombre 'contacts' para agrupar las rutas relacionadas con los contactos
 
-@predios.route('/predios/v1', methods=['GET']) # decorador que indica la ruta y los métodos HTTP permitidos
+@predios_routes.route('/predios/v1', methods=['GET']) # decorador que indica la ruta y los métodos HTTP permitidos
 # ruta para imprimir un mensaje
 def get_Mensaje():
     result = {}
     result['data'] = 'Aprendiendo_Flask - Predios'
     return jsonify(result)
 
-@predios.route('/predios/v1/listar', methods=['GET'])
+@predios_routes.route('/predios/v1/listar', methods=['GET'])
 # ruta para listar los predios
 def get_Predios():
     result = {}
@@ -21,7 +22,7 @@ def get_Predios():
     result['msg'] = "Se recuperó los predios sin inconvenientes"
     return jsonify(result), 200
 
-@predios.route('/predios/v1/insert', methods=['POST'])
+@predios_routes.route('/predios/v1/insert', methods=['POST'])
 # ruta para insertar un predio
 def insert_Predios():
     result = {}
@@ -45,7 +46,7 @@ def insert_Predios():
     result['msg'] = "Se insertó el predio sin inconvenientes"
     return jsonify(result), 201
 
-@predios.route('/predios/v1/update', methods=['POST'])
+@predios_routes.route('/predios/v1/update', methods=['POST'])
 # ruta para actualizar un predio
 def update_Predios():
     result = {}
@@ -81,7 +82,7 @@ def update_Predios():
     result['msg'] = "Se actualizó el predio sin inconvenientes"
     return jsonify(result), 200
 
-@predios.route('/predios/v1/delete', methods=['DELETE'])
+@predios_routes.route('/predios/v1/delete', methods=['DELETE'])
 # ruta para eliminar un predio
 def delete_Predios():
     result = {}
